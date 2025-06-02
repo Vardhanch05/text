@@ -5,7 +5,7 @@ import google.generativeai as genai
 from PIL import Image, UnidentifiedImageError
 
 # --- Configure Gemini API ---
-genai.configure(api_key="AIzaSyC8k8b_2dzknLVb1jvelOx6u7TmSedbLnI")
+genai.configure(api_key=st.secrets["gemini"]["api_key"])
 
 def extract_text_from_image(image_file):
     model = genai.GenerativeModel("gemini-1.5-flash")
